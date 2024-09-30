@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view(view: 'produto');
+})->name('produto.home');
+
+Route::get('/cadastro', function () {
+    return view(view: 'cadastro');
+})->name('produto.cadastro');
+
+Route::get('/lista', function () {
+    return view(view: 'lista');
+})->name('produto.lista');
