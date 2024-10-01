@@ -4,3 +4,75 @@ body{
         no-repeat
     ;
 }
+
+.form {
+    width: 90%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+}
+
+.form form{
+    width: 50%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border-color: lightgreen;
+}
+
+.form form input[type="text"],
+.form form input[type="number"] {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border: 2px solid transparent; 
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: border-color 0.3s ease; 
+}
+
+.form form input[type="text"]:focus,
+.form form input[type="number"]:focus {
+    border-color: lightgreen; 
+    outline: none; 
+}
+
+.form form input[type="submit"] {
+    width: 50%; 
+    color: black; 
+    border: 2px solid green; 
+    cursor: pointer; 
+    border-radius: 20px; 
+    transition: background-color 0.3s; 
+    margin: 10px auto;
+}
+
+.form form input[type="submit"]:hover {
+    background-color: green;
+    color: white; 
+}
+
+.form form select{
+    appearance: none;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-color: transparent;
+}
+
+.form form select:focus{
+    border-color: lightgreen; 
+    outline: none; 
+}
