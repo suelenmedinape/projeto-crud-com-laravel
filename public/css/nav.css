@@ -1,0 +1,29 @@
+.container-nav {
+    margin-top: 40px;
+    margin-right: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-nav .logo {
+    justify-content: flex-start; /* Remover se não for necessário */
+}
+
+.container-nav nav a {
+    color: white;
+    margin-right: 50px;
+    text-decoration: none;
+    padding: 5px 20px; 
+    display: inline-block;
+}
+
+.container-nav nav a:hover {
+    background-color: lightgreen;
+    border-radius: 50px;
+}
+
+.container-nav nav a.active {
+    background-color: lightgreen; 
+    border-radius: 50px;
+    padding: 5px 20px;
+}

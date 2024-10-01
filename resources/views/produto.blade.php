@@ -1,8 +1,13 @@
-@extends('components.app')
-@section('page', 'Home')
+<x-app>
+    <x-slot:title>
+        Home
+        </x-slot>
 
-@section('content')
-    <div>
-        Olá esta é a home
-    </div>
-@endsection
+        <x-slot:nav>
+            <x-nav>
+                
+            </x-nav>
+        </x-slot>
+
+</x-app>
+

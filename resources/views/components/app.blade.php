@@ -3,29 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href=" {{ url('/css/bootstrap.min.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App - @yield('page')</title>
+    <link rel="stylesheet" href=" {{ url('/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href=" {{ url('/css/nav.css') }}">
+    <link rel="stylesheet" href=" {{ url('/css/style.css') }}">
+    <title>Todo App - {{ $title }}</title>
 </head>
 
 <body>
 
-    <header class="container-fluid">
-        <nav>
-            <a href="/"> Home </a>
-            <a href="/cadastro"> Cadastro </a>
-            <a href="/lista"> Lista </a>
-            </ul>
-        </nav>
-    </header>
-
-
+    {{ isset($nav) ? $nav : ''}}
 
     <main class="container-fluid">
-        @yield('content')
+        {{ $slot }}
     </main>
-
-    <script src=" {{ url('/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 
