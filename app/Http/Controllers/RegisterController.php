@@ -27,7 +27,7 @@ class RegisterController extends Controller
 
         $produto->save();
 
-        return redirect()->route('produto.cadastro')->with('status', ['type' => 'sucess', 'message' => 'Produto cadastro com sucesso.']);
+        return redirect()->route('produto.cadastro')->with('status', ['type' => 'success', 'message' => 'Produto cadastro com sucesso.']);
     }
 
     public function list(){
@@ -41,7 +41,7 @@ class RegisterController extends Controller
         $produto->delete();
 
         return redirect()->route('produto.list')
-        ->with('status', ['type' => 'sucess', 'message' => 'Deletado com sucesso']);
+        ->with('status', ['type' => 'success', 'message' => 'Deletado com sucesso']);
     }
 
     public function edit($id){
@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'quantidade' => $request->quantidade
         ]);
 
-        return redirect()->route('produto.list')->with(['produtos' => $this->getAllProds(), 'status' => ['type' => 'sucess', 'message' => 'Atualizado com sucesso']]);
+        return redirect()->route('produto.list')->with(['produtos' => $this->getAllProds(), 'status' => ['type' => 'success', 'message' => 'Atualizado com sucesso']]);
     }
 
 }

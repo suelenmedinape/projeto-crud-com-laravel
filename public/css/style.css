@@ -1,25 +1,23 @@
-body{
-    background: 
-        url('../assets/fundoo.png')
-        no-repeat
-    ;
+body {
+    background:
+        url('../assets/fundoo.png') no-repeat;
 }
 
 .form {
     width: 90%;
     height: 500px;
-    background-color: rgba(255, 255, 255, 0.3); 
-    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     margin: 0 auto;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: center; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
-.form form{
+.form form {
     width: 50%;
     font-size: 20px;
     display: flex;
@@ -30,49 +28,113 @@ body{
 .form form input[type="text"],
 .form form input[type="number"] {
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.3); 
-    backdrop-filter: blur(10px); 
-    border: 2px solid transparent; 
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
     padding-left: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    transition: border-color 0.3s ease; 
+    transition: border-color 0.3s ease;
 }
 
 .form form input[type="text"]:focus,
 .form form input[type="number"]:focus {
-    border-color: lightgreen; 
-    outline: none; 
+    border-color: lightgreen;
+    outline: none;
 }
 
 .form form input[type="submit"] {
-    width: 50%; 
-    color: black; 
-    border: 2px solid green; 
-    cursor: pointer; 
-    border-radius: 20px; 
-    transition: background-color 0.3s; 
+    width: 50%;
+    color: black;
+    border: 2px solid green;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
     margin: 10px auto;
 }
 
 .form form input[type="submit"]:hover {
     background-color: green;
-    color: white; 
+    color: white;
 }
 
-.form form select{
+.form form select {
     appearance: none;
     height: 40px;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3); 
-    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     border-color: transparent;
 }
 
-.form form select:focus{
-    border-color: lightgreen; 
-    outline: none; 
+.form form select:focus {
+    border-color: lightgreen;
+    outline: none;
+}
+
+/* Lista */
+
+table tbody tr td a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 20px; 
+    display: inline-block;
+}
+
+table tbody tr td  a:hover {
+    background-color: lightgreen;
+    border-radius: 50px;
+}
+
+table {
+    margin: 20px auto; 
+    width: 80%;
+    table-layout: fixed;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.tbl-content {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+section {
+    margin: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
