@@ -34,4 +34,10 @@
             @else
             No data
             @endif
+
+            @if (session('status'))
+            <x-alert type="{{ session('status')['type'] }}">
+                {{ session('status')['message'] }}
+            </x-alert>
+            @endif
 </x-app>

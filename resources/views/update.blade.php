@@ -14,12 +14,12 @@
                     <input type="text" name="descricao" id="desc" required value="{{$produto->descricao}}">
                     <label for="categoria"> Categoria do Produto: </label>
                     <select name="categoria" id="categ" required>
-                        <option value="" disabled>SELECIONE UMA CATEGORIA</option>
-                        <option value="alimentacao" {{ $produto->categoria == 'alimentacao' ? 'selected' : '' }}>ALIMENTAÇÃO</option>
-                        <option value="bebidas" {{ $produto->categoria == 'bebidas' ? 'selected' : '' }}>BEBIDAS</option>
-                        <option value="higiene" {{ $produto->categoria == 'higiene' ? 'selected' : '' }}>HIGIENE</option>
-                        <option value="limpeza" {{ $produto->categoria == 'limpeza' ? 'selected' : '' }}>LIMPEZA</option>
-                        <option value="outros" {{ $produto->categoria == 'outros' ? 'selected' : '' }}>OUTROS</option>
+                        <option value="" disabled selected>SELECIONE UMA CATEGORIA</option>
+                        <option value="ALIMENTACAO" {{ $produto->categoria === 'ALIMENTACAO' ? 'selected' : '' }}>ALIMENTAÇÃO</option>
+                        <option value="BEBIDAS" {{ $produto->categoria === 'BEBIDAS' ? 'selected' : '' }}>BEBIDAS</option>
+                        <option value="HIGIENE" {{ $produto->categoria === 'HIGIENE' ? 'selected' : '' }}>HIGIENE</option>
+                        <option value="LIMPEZA" {{ $produto->categoria === 'LIMPEZA' ? 'selected' : '' }}>LIMPEZA</option>
+                        <option value="OUTROS" {{ $produto->categoria === 'OUTROS' ? 'selected' : '' }}>OUTROS</option>
                     </select>
 
                     <label for="quantidade"> Quantidade: </label>

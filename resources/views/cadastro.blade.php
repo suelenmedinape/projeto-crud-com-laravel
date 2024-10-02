@@ -26,4 +26,10 @@
                     <input type="submit" class="btn" value="Cadastrar">
                 </form>
             </div>
+
+            @if (session('status'))
+            <x-alert type="{{ session('status')['type'] }}">
+                {{ session('status')['message'] }}
+            </x-alert>
+            @endif
 </x-app>
