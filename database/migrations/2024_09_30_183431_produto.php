@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('produto', function (Blueprint $table) {
-            $table->id();
-            $table->string('descricao', 255);
-            $table->enum('categoria', ['ALIMENTACAO', 'BEBIDAS', 'HIGIENE', 'LIMPEZA', 'OUTROS'])->default('OUTROS');
-            $table->integer('quantidade');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('produto')) {
+            Schema::create('produto', function (Blueprint $table) {
+                $table->id();
+                $table->string('descricao', 255);
+                $table->enum('categoria', ['ALIMENTACAO', 'BEBIDAS', 'HIGIENE', 'LIMPEZA', 'OUTROS'])->default('OUTROS');
+                $table->integer('quantidade')->default(0);
+                $table->timestamps();
+            });
+        }
     }
 
     /**

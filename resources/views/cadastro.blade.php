@@ -8,7 +8,7 @@
             </x-nav>
             </x-slot>
             <div class="form">
-                <form method="post" action="/add">
+                <form method="post" action="/cadastro">
                     @csrf
                     <label for="descricao"> Descrição: </label>
                     <input type="text" name="descricao" id="desc" required>

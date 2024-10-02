@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view(view: 'produto');
+    return view('produto');
 })->name('produto.home');
 
 Route::get('/cadastro', function () {
-    return view(view: 'cadastro');
+    return view('cadastro');
 })->name('produto.cadastro');
 
-Route::get('/lista', function () {
-    return view(view: 'lista');
-})->name('produto.lista');
+Route::post('/cadastro', [RegisterController::class, 'add'])->name('produto.add');
+
+Route::get('/lista', [RegisterController::class, 'list'])->name('produto.list');
+
+Route::get('/edit/{id}', [RegisterController::class, 'edit'])->name('produto.edit');
+
+Route::get('/delete/{id}', [RegisterController::class, 'delete'])->name('produto.delete');
+
+Route::post('/update/{id}', [RegisterController::class, 'update'])->name('produto.update');
